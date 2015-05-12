@@ -20,6 +20,7 @@ class hard implements ActionListener {
 	//plus total and flag to store score and count 
 	private int total = 0 ;
 	private int flag = 1 ;
+	ImageIcon[] arr = new ImageIcon[11];
 	 //plus 15 buttons and labels it needs
 	JLabel title = new JLabel();
 	JLabel Q_ = new JLabel("Quest :");
@@ -44,11 +45,80 @@ class hard implements ActionListener {
 	        frame.setSize(200, 300);
 		//set layout
 	        frame.setLayout(new GridBagLayout());
-		//terminate when the frame is closed
-	       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+	        //terminate when the frame is closed
+	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 
-	        //the codes which below this line before next command are typesetting
-	        GridBagConstraints title_g = new GridBagConstraints();
+	       	//qusetion and answers
+	       	String q[] = {" ",
+                      "What face is it ?",
+                      "What suit is it ?",
+                      "Does it symmetry?",
+                      "What color is it ?",
+                      "What face is it ?",
+                      "Which queen holds arm ?",
+                      "Who is she ?",
+                      "Who is he ?",
+                      "What does it represent ? ",
+                      "Which king with no beard ?"};
+        	Q = q;
+		String Ans_a[] = {" ",
+                      "Ace",
+                      "Spade",
+                      "horizontal",
+                      "black",
+                      "King",
+                      "Diamond",
+                      "Judith",
+                      "Ogier",
+                      "Lucky",
+                      "Heart"};
+		ans_a = Ans_a;
+		String Ans_b[] = {" ",
+                      "Deuce",
+                      "Club",
+                      "vertical",
+                      "brown",
+                      "Joker",
+                      "Spade",
+                      "Rachel",
+                      "La Hire",
+                      "Money",
+                      "Club"};
+		ans_b = Ans_b;
+		String Ans_c[] = {" ",
+                      "Nine",
+                      "Diamond",
+                      "both",
+                      "blue",
+                      "Queen",
+                      "Club",
+                      "Athena",
+                      "Lancelot",
+                      "Love",
+                      "Spade"};
+		ans_c = Ans_c;
+		String Ans_d[] = {" ",
+                      "Five",
+                      "Heart",
+                      "neither",
+                      "green",
+                      "Jack",
+                      "Heart",
+                      "Argine",
+                      "Hector",
+                      "Death",
+                      "Diamond"};
+		ans_d = Ans_d;
+		
+		//set cards into array
+		for(int c = 1 ; c <= 10 ; c++){
+			//put all of cards which named 1-10 .png 
+			//arr[1] store 1.png, arr[2] store 2.png, and so on
+			arr[c] = new ImageIcon(c+".png");
+		}
+	       
+	       //the codes which below this line before next command are typesetting
+	       GridBagConstraints title_g = new GridBagConstraints();
 	       title_g.gridx = 0 ; title_g.gridy = 0 ;
 	       title_g.gridwidth = 2 ; title_g.gridheight = 1 ;
 	       title_g.weightx = 0 ; title_g.weighty = 0 ;
@@ -184,6 +254,7 @@ class hard implements ActionListener {
 		title.setText(flag+" / 10 ");
 		//set question and selections
 		quest.setText(Q[flag]);
+		pic.setIcon(arr[flag]);
 		A.setText(ans_a[flag]);
 		B.setText(ans_b[flag]);
 		C.setText(ans_c[flag]);
