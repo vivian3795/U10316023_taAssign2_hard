@@ -269,9 +269,92 @@ class hard implements ActionListener {
 				A.addActionListener(this);
 				B.addActionListener(this);
 				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}case 2:{
+				A.setActionCommand("");
+				B.setActionCommand("");
+				C.setActionCommand("");
+				D.setActionCommand("ANS");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}case 3:{
+				A.setActionCommand("");
+				B.setActionCommand("");
+				C.setActionCommand("");
+				D.setActionCommand("ANS");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}case 4:{
+				A.setActionCommand("");
+				B.setActionCommand("");
+				C.setActionCommand("ANS");
+				D.setActionCommand("");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}case 5:{
+				A.setActionCommand("");
+				B.setActionCommand("ANS");
+				C.setActionCommand("");
+				D.setActionCommand("");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}
+			case 6:{
+				A.setActionCommand("");
+				B.setActionCommand("ANS");
+				C.setActionCommand("");
+				D.setActionCommand("");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}case 7:{
+				A.setActionCommand("ANS");
+				B.setActionCommand("");
+				C.setActionCommand("");
+				D.setActionCommand("");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}case 8:{
+				A.setActionCommand("");
+				B.setActionCommand("");
+				C.setActionCommand("ANS");
+				D.setActionCommand("");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}case 9:{
+				A.setActionCommand("");
+				B.setActionCommand("");
+				C.setActionCommand("");
+				D.setActionCommand("ANS");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
+				D.addActionListener(this);break;
+			}case 10:{
+				A.setActionCommand("ANS");
+				B.setActionCommand("");
+				C.setActionCommand("");
+				D.setActionCommand("");
+				A.addActionListener(this);
+				B.addActionListener(this);
+				C.addActionListener(this);
 				D.addActionListener(this);
 			}
 		}
+		
 	}
 	
 	//listener
