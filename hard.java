@@ -9,7 +9,7 @@
  import java.awt.event.*;
  import java.awt.*;
  
- class hard implements ActionListener {
+class hard implements ActionListener {
 	private JFrame frame;
 	//plus questions and all selections
 	private String[] Q;
@@ -20,24 +20,166 @@
 	//plus total and flag to store score and count 
 	private int total = 0 ;
 	private int flag = 1 ;
-	//plus 15 buttons and labels it needs
-	JLabel title = new JLabel("1");
-  	JLabel Q_ = new JLabel("Question :");
-  	JLabel quest = new JLabel("2");	
-  	JLabel pic = new JLabel();	
-  	JLabel a = new JLabel(" A ");
-  	JLabel b = new JLabel(" B ");
-  	JLabel c = new JLabel(" C ");
-  	JLabel d = new JLabel(" D ");
-  	JLabel score = new JLabel(" Score : ");
-  	JLabel nowscore = new JLabel("0");
-  	JButton next = new JButton(" next ");
-  	JButton A = new JButton();
-  	JButton B = new JButton();
+	 //plus 15 buttons and labels it needs
+	JLabel title = new JLabel();
+	JLabel Q_ = new JLabel("Quest :");
+	JLabel quest = new JLabel();	
+	JLabel pic = new JLabel();	
+	JLabel a = new JLabel(" A ");
+	JLabel b = new JLabel(" B ");
+	JLabel c = new JLabel(" C ");
+	JLabel d = new JLabel(" D ");
+	JLabel score = new JLabel(" Score : ");
+	JLabel nowscore = new JLabel("0");
+	JButton next = new JButton(" next ");
+	JButton A = new JButton();
+	JButton B = new JButton();
 	JButton C = new JButton();
-  	JButton D = new JButton();
-  	
-	 public void QA(int flag){
+	JButton D = new JButton();
+	
+    	public hard(){
+		//create a frame
+	        frame = new JFrame();
+		//set size
+	        frame.setSize(200, 300);
+		//set layout
+	        frame.setLayout(new GridBagLayout());
+		//terminate when the frame is closed
+	       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+
+	        //the codes which below this line before next command are typesetting
+	        GridBagConstraints title_g = new GridBagConstraints();
+	       title_g.gridx = 0 ; title_g.gridy = 0 ;
+	       title_g.gridwidth = 2 ; title_g.gridheight = 1 ;
+	       title_g.weightx = 0 ; title_g.weighty = 0 ;
+	       title_g.fill = GridBagConstraints.NONE ;
+	       title_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( title , title_g ) ;
+		
+	       GridBagConstraints Q_g = new GridBagConstraints();
+	       Q_g.gridx = 0 ; Q_g.gridy = 1 ;
+	       Q_g.gridwidth = 2 ; Q_g.gridheight = 1 ;
+	       Q_g.weightx = 0 ; Q_g.weighty = 0 ;
+	       Q_g.fill = GridBagConstraints.NONE ;
+	       Q_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( Q_ , Q_g ) ;
+	       
+	       GridBagConstraints quest_g = new GridBagConstraints();
+	       quest_g.gridx = 2 ; quest_g.gridy = 1 ;
+	       quest_g.gridwidth = 4 ; quest_g.gridheight = 1 ;
+	       quest_g.weightx = 0 ; quest_g.weighty = 0 ;
+	       quest_g.fill = GridBagConstraints.BOTH ;
+	       quest_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( quest , quest_g ) ;
+	       
+	       GridBagConstraints pic_g = new GridBagConstraints();
+	       pic_g.gridx = 0 ; pic_g.gridy = 2 ;
+	       pic_g.gridwidth = 6 ; pic_g.gridheight = 4 ;
+	       pic_g.weightx = 0 ; pic_g.weighty = 0 ;
+	       pic_g.fill = GridBagConstraints.NONE ;
+	       pic_g.anchor = GridBagConstraints.CENTER ;
+	       frame.add( pic , pic_g ) ;
+	       
+	       GridBagConstraints a_g = new GridBagConstraints();
+	       a_g.gridx = 0 ; a_g.gridy = 3 ;
+	       a_g.gridwidth = 1 ; a_g.gridheight = 1 ;
+	       a_g.weightx = 0 ; a_g.weighty = 0 ;
+	       a_g.fill = GridBagConstraints.NONE ;
+	       a_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( a , a_g ) ;
+	       
+	       GridBagConstraints b_g = new GridBagConstraints();
+	       b_g.gridx = 0 ; b_g.gridy = 4 ;
+	       b_g.gridwidth = 1 ; b_g.gridheight = 1 ;
+	       b_g.weightx = 0 ; b_g.weighty = 0 ;
+	       b_g.fill = GridBagConstraints.NONE ;
+	       b_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( b , b_g ) ;
+	       
+	       GridBagConstraints c_g = new GridBagConstraints();
+	       c_g.gridx = 0 ; c_g.gridy = 5 ;
+	       c_g.gridwidth = 1 ; c_g.gridheight = 1 ;
+	       c_g.weightx = 0 ; c_g.weighty = 0 ;
+	       c_g.fill = GridBagConstraints.NONE ;
+	       c_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( c , c_g ) ;
+	       
+	       GridBagConstraints d_g = new GridBagConstraints();
+	       d_g.gridx = 0 ; d_g.gridy = 6 ;
+	       d_g.gridwidth = 1 ; d_g.gridheight = 1 ;
+	       d_g.weightx = 0 ; d_g.weighty = 0 ;
+	       d_g.fill = GridBagConstraints.NONE ;
+	       d_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( d , d_g ) ;
+	       
+	       GridBagConstraints score_g = new GridBagConstraints();
+	       score_g.gridx = 0 ; score_g.gridy = 7 ;
+	       score_g.gridwidth = 2 ; score_g.gridheight = 1 ;
+	       score_g.weightx = 0 ; score_g.weighty = 0 ;
+	       score_g.fill = GridBagConstraints.NONE ;
+	       score_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( score , score_g ) ;
+	       
+	       GridBagConstraints nowscore_g = new GridBagConstraints();
+	       nowscore_g.gridx = 1 ; nowscore_g.gridy = 8 ;
+	       nowscore_g.gridwidth = 2 ; nowscore_g.gridheight = 1 ;
+	       nowscore_g.weightx = 0 ; nowscore_g.weighty = 0 ;
+	       nowscore_g.fill = GridBagConstraints.NONE ;
+	       nowscore_g.anchor = GridBagConstraints.CENTER ;
+	       frame.add( nowscore , nowscore_g ) ;
+	       
+	       GridBagConstraints next_g = new GridBagConstraints();
+	       next_g.gridx = 4 ; next_g.gridy = 8 ;
+	       next_g.gridwidth = 2 ; next_g.gridheight = 1 ;
+	       next_g.weightx = 0 ; next_g.weighty = 0 ;
+	       next_g.fill = GridBagConstraints.NONE ;
+	       next_g.anchor = GridBagConstraints.EAST ;
+	       frame.add( next , next_g ) ;
+	       
+	       GridBagConstraints A_g = new GridBagConstraints();
+	       A_g.gridx = 1 ; A_g.gridy = 3 ;
+	       A_g.gridwidth = 5 ; A_g.gridheight = 1 ;
+	       A_g.weightx = 0 ; A_g.weighty = 0 ;
+	       A_g.fill = GridBagConstraints.BOTH ;
+	       A_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( A , A_g ) ;
+	       
+	       GridBagConstraints B_g = new GridBagConstraints();
+	       B_g.gridx = 1 ; B_g.gridy = 4 ;
+	       B_g.gridwidth = 5 ; B_g.gridheight = 1 ;
+	       B_g.weightx = 0 ; B_g.weighty = 0 ;
+	       B_g.fill = GridBagConstraints.BOTH ;
+	       B_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( B , B_g ) ;
+	       
+	       GridBagConstraints C_g = new GridBagConstraints();
+	       C_g.gridx = 1 ; C_g.gridy = 5 ;
+	       C_g.gridwidth = 5 ; C_g.gridheight = 1 ;
+	       C_g.weightx = 0 ; C_g.weighty = 0 ;
+	       C_g.fill = GridBagConstraints.BOTH ;
+	       C_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( C , C_g ) ;
+	       
+	       GridBagConstraints D_g = new GridBagConstraints();
+	       D_g.gridx = 1 ; D_g.gridy = 6 ;
+	       D_g.gridwidth = 5 ; D_g.gridheight = 1 ;
+	       D_g.weightx = 0 ; D_g.weighty = 0 ;
+	       D_g.fill = GridBagConstraints.BOTH ;
+	       D_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( D , D_g ) ;
+	       
+	       //set the first question
+	       QA(flag);
+	       //set visible
+	       frame.setVisible(true);
+	       
+	       //set next addActionListener
+	       next.setActionCommand("NEXT");
+	       next.addActionListener(this);
+		
+	}
+	
+	public void QA(int flag){
 		//set title n/10
 		title.setText(flag+" / 10 ");
 		//set question and selections
