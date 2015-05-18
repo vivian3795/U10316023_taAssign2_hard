@@ -42,7 +42,7 @@ class hard implements ActionListener {
 		//create a frame
 	        frame = new JFrame();
 		//set size
-	        frame.setSize(200, 300);
+	        frame.setSize(300, 300);
 		//set layout
 	        frame.setLayout(new GridBagLayout());
 	        //terminate when the frame is closed
@@ -53,13 +53,13 @@ class hard implements ActionListener {
                       "What face is it ?",
                       "What suit is it ?",
                       "Does it symmetry?",
-                      "What color is it ?",
+                      "What color is it?",
                       "What face is it ?",
-                      "Which queen holds arm ?",
-                      "Who is she ?",
-                      "Who is he ?",
-                      "What does it represent ? ",
-                      "Which king with no beard ?"};
+                      "___ queen has arm",
+                      "What is her name?",
+                      "What is his name?",
+                      "It represents ___",
+                      "___ king no beard"};
         	Q = q;
 		String Ans_a[] = {" ",
                       "Ace",
@@ -151,7 +151,7 @@ class hard implements ActionListener {
 	       frame.add( pic , pic_g ) ;
 	       
 	       GridBagConstraints a_g = new GridBagConstraints();
-	       a_g.gridx = 0 ; a_g.gridy = 3 ;
+	       a_g.gridx = 0 ; a_g.gridy = 13 ;
 	       a_g.gridwidth = 1 ; a_g.gridheight = 1 ;
 	       a_g.weightx = 0 ; a_g.weighty = 0 ;
 	       a_g.fill = GridBagConstraints.NONE ;
@@ -159,7 +159,7 @@ class hard implements ActionListener {
 	       frame.add( a , a_g ) ;
 	       
 	       GridBagConstraints b_g = new GridBagConstraints();
-	       b_g.gridx = 0 ; b_g.gridy = 4 ;
+	       b_g.gridx = 0 ; b_g.gridy = 14 ;
 	       b_g.gridwidth = 1 ; b_g.gridheight = 1 ;
 	       b_g.weightx = 0 ; b_g.weighty = 0 ;
 	       b_g.fill = GridBagConstraints.NONE ;
@@ -167,7 +167,7 @@ class hard implements ActionListener {
 	       frame.add( b , b_g ) ;
 	       
 	       GridBagConstraints c_g = new GridBagConstraints();
-	       c_g.gridx = 0 ; c_g.gridy = 5 ;
+	       c_g.gridx = 0 ; c_g.gridy = 15 ;
 	       c_g.gridwidth = 1 ; c_g.gridheight = 1 ;
 	       c_g.weightx = 0 ; c_g.weighty = 0 ;
 	       c_g.fill = GridBagConstraints.NONE ;
@@ -175,39 +175,15 @@ class hard implements ActionListener {
 	       frame.add( c , c_g ) ;
 	       
 	       GridBagConstraints d_g = new GridBagConstraints();
-	       d_g.gridx = 0 ; d_g.gridy = 6 ;
+	       d_g.gridx = 0 ; d_g.gridy = 16 ;
 	       d_g.gridwidth = 1 ; d_g.gridheight = 1 ;
 	       d_g.weightx = 0 ; d_g.weighty = 0 ;
 	       d_g.fill = GridBagConstraints.NONE ;
 	       d_g.anchor = GridBagConstraints.WEST ;
 	       frame.add( d , d_g ) ;
 	       
-	       GridBagConstraints score_g = new GridBagConstraints();
-	       score_g.gridx = 0 ; score_g.gridy = 7 ;
-	       score_g.gridwidth = 2 ; score_g.gridheight = 1 ;
-	       score_g.weightx = 0 ; score_g.weighty = 0 ;
-	       score_g.fill = GridBagConstraints.NONE ;
-	       score_g.anchor = GridBagConstraints.WEST ;
-	       frame.add( score , score_g ) ;
-	       
-	       GridBagConstraints nowscore_g = new GridBagConstraints();
-	       nowscore_g.gridx = 1 ; nowscore_g.gridy = 8 ;
-	       nowscore_g.gridwidth = 2 ; nowscore_g.gridheight = 1 ;
-	       nowscore_g.weightx = 0 ; nowscore_g.weighty = 0 ;
-	       nowscore_g.fill = GridBagConstraints.NONE ;
-	       nowscore_g.anchor = GridBagConstraints.CENTER ;
-	       frame.add( nowscore , nowscore_g ) ;
-	       
-	       GridBagConstraints next_g = new GridBagConstraints();
-	       next_g.gridx = 4 ; next_g.gridy = 8 ;
-	       next_g.gridwidth = 2 ; next_g.gridheight = 1 ;
-	       next_g.weightx = 0 ; next_g.weighty = 0 ;
-	       next_g.fill = GridBagConstraints.NONE ;
-	       next_g.anchor = GridBagConstraints.EAST ;
-	       frame.add( next , next_g ) ;
-	       
 	       GridBagConstraints A_g = new GridBagConstraints();
-	       A_g.gridx = 1 ; A_g.gridy = 3 ;
+	       A_g.gridx = 1 ; A_g.gridy = 13 ;
 	       A_g.gridwidth = 5 ; A_g.gridheight = 1 ;
 	       A_g.weightx = 0 ; A_g.weighty = 0 ;
 	       A_g.fill = GridBagConstraints.BOTH ;
@@ -215,7 +191,7 @@ class hard implements ActionListener {
 	       frame.add( A , A_g ) ;
 	       
 	       GridBagConstraints B_g = new GridBagConstraints();
-	       B_g.gridx = 1 ; B_g.gridy = 4 ;
+	       B_g.gridx = 1 ; B_g.gridy = 14 ;
 	       B_g.gridwidth = 5 ; B_g.gridheight = 1 ;
 	       B_g.weightx = 0 ; B_g.weighty = 0 ;
 	       B_g.fill = GridBagConstraints.BOTH ;
@@ -223,7 +199,7 @@ class hard implements ActionListener {
 	       frame.add( B , B_g ) ;
 	       
 	       GridBagConstraints C_g = new GridBagConstraints();
-	       C_g.gridx = 1 ; C_g.gridy = 5 ;
+	       C_g.gridx = 1 ; C_g.gridy = 15 ;
 	       C_g.gridwidth = 5 ; C_g.gridheight = 1 ;
 	       C_g.weightx = 0 ; C_g.weighty = 0 ;
 	       C_g.fill = GridBagConstraints.BOTH ;
@@ -231,12 +207,36 @@ class hard implements ActionListener {
 	       frame.add( C , C_g ) ;
 	       
 	       GridBagConstraints D_g = new GridBagConstraints();
-	       D_g.gridx = 1 ; D_g.gridy = 6 ;
+	       D_g.gridx = 1 ; D_g.gridy = 16 ;
 	       D_g.gridwidth = 5 ; D_g.gridheight = 1 ;
 	       D_g.weightx = 0 ; D_g.weighty = 0 ;
 	       D_g.fill = GridBagConstraints.BOTH ;
 	       D_g.anchor = GridBagConstraints.WEST ;
 	       frame.add( D , D_g ) ;
+	       
+	       GridBagConstraints score_g = new GridBagConstraints();
+	       score_g.gridx = 0 ; score_g.gridy = 17 ;
+	       score_g.gridwidth = 2 ; score_g.gridheight = 1 ;
+	       score_g.weightx = 0 ; score_g.weighty = 0 ;
+	       score_g.fill = GridBagConstraints.NONE ;
+	       score_g.anchor = GridBagConstraints.WEST ;
+	       frame.add( score , score_g ) ;
+	       
+	       GridBagConstraints nowscore_g = new GridBagConstraints();
+	       nowscore_g.gridx = 1 ; nowscore_g.gridy = 18 ;
+	       nowscore_g.gridwidth = 2 ; nowscore_g.gridheight = 1 ;
+	       nowscore_g.weightx = 0 ; nowscore_g.weighty = 0 ;
+	       nowscore_g.fill = GridBagConstraints.NONE ;
+	       nowscore_g.anchor = GridBagConstraints.CENTER ;
+	       frame.add( nowscore , nowscore_g ) ;
+	       
+	       GridBagConstraints next_g = new GridBagConstraints();
+	       next_g.gridx = 4 ; next_g.gridy = 18 ;
+	       next_g.gridwidth = 2 ; next_g.gridheight = 1 ;
+	       next_g.weightx = 0 ; next_g.weighty = 0 ;
+	       next_g.fill = GridBagConstraints.NONE ;
+	       next_g.anchor = GridBagConstraints.EAST ;
+	       frame.add( next , next_g ) ;
 	       
 	       //set the first question
 	       QA(flag);
@@ -373,7 +373,10 @@ class hard implements ActionListener {
 		}//go to the next question 
 		else if(cmd == "NEXT"){
 			flag++;
-			QA(flag);
+			if(flag < 11)
+				QA(flag);
+			else
+				JOptionPane.showMessageDialog(null, "FIN", "THE END", JOptionPane.PLAIN_MESSAGE );
 		}
 	}
 }
