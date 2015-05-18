@@ -40,9 +40,9 @@ class hard implements ActionListener {
 	
     	public hard(){
 		//create a frame
-	        frame = new JFrame();
+	        frame = new JFrame("U10316023_question");
 		//set size
-	        frame.setSize(300, 300);
+	        frame.setSize(300, 350);
 		//set layout
 	        frame.setLayout(new GridBagLayout());
 	        //terminate when the frame is closed
@@ -380,3 +380,4 @@ class hard implements ActionListener {
 		}
 	}
 }
+
